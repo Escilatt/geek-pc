@@ -1,0 +1,120 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #ff6f61;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #ff6f61;
+}
+
+.parrafo {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    margin-bottom: 40px;
+}
+
+.preguntas {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.preguntas:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+.preguntas h2 {
+    color: #ff6f61;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.preguntas p {
+    color: #a0a0a0;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
+    opacity: 0;
+    margin-top: 0;
+}
+
+.preguntas.abierto p {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 10px;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.buttons a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 24px;
+    background-color: #ff6f61;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buttons a:hover {
+    background-color: #ff3b2f;
+    box-shadow: 0 0 15px #ff6f61;
+}
+
+.buttons a.email {
+    background-color: #333;
+    border: 1px solid #ff6f61;
+}
+
+.buttons a.email:hover {
+    background-color: #444;
+    box-shadow: 0 0 15px #ff6f61;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .parrafo {
+        font-size: 1rem;
+    }
+
+    .preguntas {
+        padding: 15px;
+    }
+
+    .preguntas h2 {
+        font-size: 1.3rem;
+    }
+
+    .preguntas p {
+        font-size: 0.9rem;
+    }
+
+    .buttons a {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}

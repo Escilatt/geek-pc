@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Geek PC</title>
+</head>
+<body>
+    <h1>Geek PC</h1>
+    <p class="parrafo">Arma tu PC moderna en Geek PC de la forma mas profesional.</p>
+
+    <div class="componentes">
+        <div class="componente">
+            <label for="marca-procesador">Selecciona una marca de Procesador:</label>
+            <select id="marca-procesador" onchange="cargarProcesadores()">
+                <option value="">--Elige una marca--</option>
+                <option value="intel">Intel</option>
+                <option value="amd">AMD</option>
+            </select>
+        </div>
+
+        <div class="componente">
+            <label for="procesador">Selecciona un Procesador:</label>
+            <select id="procesador" onchange="actualizarSocketYRecomendaciones()" disabled>
+                <option value="">--Elige un procesador--</option>
+            </select>
+        </div>
+
+        <div class="socket-info">
+            Socket: <span id="socket">No seleccionado</span>
+        </div>
+
+        <div class="componente">
+            <label for="marca-gpu">Selecciona una marca de Tarjeta Gráfica:</label>
+            <select id="marca-gpu" onchange="cargarGPUs()">
+                <option value="">--Elige una marca--</option>
+                <option value="nvidia">NVIDIA</option>
+                <option value="amd">AMD</option>
+            </select>
+        </div>
+
+        <div class="componente">
+            <label for="gpu">Selecciona una Tarjeta Gráfica:</label>
+            <select id="gpu" onchange="actualizarRecomendaciones()" disabled>
+                <option value="">--Elige una tarjeta gráfica--</option>
+            </select>
+        </div>
+        <div id="recomendacion-gpu" class="recomendacion-gpu"></div>
+
+        <div class="componente">
+            <label for="ram">Selecciona la Memoria RAM:</label>
+            <select id="ram" onchange="actualizarRecomendaciones()">
+                <option value="">--Elige la memoria RAM--</option>
+            </select>
+        </div>
+
+        <div class="componente">
+            <label for="ram">Selecciona la Memoria RAM:</label>
+            <select id="ram2" onchange="actualizarRecomendaciones()">
+                <option value="">--Elige la memoria RAM--</option>
+            </select>
+        </div>
+
+        <div class="componente">
+            <label for="almacenamiento">Selecciona el Almacenamiento 1:</label>
+            <select id="almacenamiento" onchange="actualizarRecomendaciones()">
+                <option value="">--Elige el almacenamiento--</option>
+            </select>
+        </div>
+
+        <div class="componente">
+            <label for="almacenamiento">Selecciona el Almacenamiento 2:</label>
+            <select id="almacenamiento2" onchange="actualizarRecomendaciones()">
+            </select>
+        </div>
+
+        <div class="componente">
+            <label for="tipo-fuente">Selecciona el tipo de cableado de la Fuente:</label>
+            <select id="tipo-fuente" onchange="cargarFuentes()">
+                <option value="">--Elige el tipo de Fuente de Poder--</option>
+                <option value="modular">Modular</option>
+                <option value="noModular">No Modular</option>
+            </select>
+        </div>
+
+        <div class="componente">
+            <label for="fuente">Selecciona la Fuente:</label>
+            <select id="fuente" onchange="recomendacionFuente()" disabled>
+                <option value="">--Elige la Fuente de Poder--</option>
+            </select>
+        </div>
+        <div id="recomendacion-fuente" class="recomendacion-fuente"></div>
+
+        <div class="componente">
+            <label for="tipo-gabinete">Selecciona el Tipo de Gabinete:</label>
+            <select id="tipo-gabinete" onchange="cargarGabinetes()">
+                <option value="">--Elige el Tipo de Gabinete--</option>
+                <option value="oficina">Oficina</option>
+                <option value="gamer">Gamer</option>
+                <option value="personalizado">Personalizado</option>
+            </select>
+        </div>
+
+        <div class="componente">
+            <label for="gabinete">Selecciona el Gabinete:</label>
+            <select id="gabinete" disabled>
+                <option value="">--Elige el Gabinete--</option>
+            </select>
+        </div>
+        <p class="disclaimer">PD: Todos los precios estan en dolares, pero los precios finales son calculados a pesos chilenos</p>
+        <button id="imprimir">Realizar Cotizacion</button>
+        <div class="buttons"><a href="preguntas.html">Preguntas Frecuentes</a></div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="scripts/script.js"></script>
+</html>
